@@ -1,0 +1,40 @@
+<div class="navbar">
+    <ul>
+      <li class="nav-item">
+        <p>
+          La mia Area
+        </p>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/header">Home</a>
+      </li>
+    </ul>
+</div>
+
+<div class="container">
+        <div class="form">  
+          <span> <i class="bi bi-files"></i> </span>      
+    
+            <input 
+              #searchBar
+              type="text"
+              class="form-control form-input"
+              placeholder="Search anything..."
+              id="title"
+              required
+              [(ngModel)] ="searchString"
+              name="title"
+              (keyup)="searchPost(searchBar.value)"
+            />  
+        </div>
+</div>    
+  
+<div class="list-group" *ngIf="tempPosts.length >= 1">
+    <div class="list-group-item" *ngFor="let post of tempPosts">
+      <p>{{ post.title }}</p>
+
+      <a (click)="onDelete(post.id ?? '')"> 
+        <i class="bi bi-x-circle-fill"></i> 
+      </a>
+    </div>
+  </div> 

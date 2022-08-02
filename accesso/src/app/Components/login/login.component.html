@@ -1,0 +1,58 @@
+<div class="container">
+    <form class="form-horizontal" role="form">
+      <form class="form-horizontal" [formGroup]="logInForm" (ngSubmit)="logInUser()" >
+        <h1 class="title"> 
+          Noodle<span class="marchio">&#174;</span>
+        </h1>
+  
+        <h4 class="accedi">Accedi</h4>
+  
+        <p class="p"> Accedi con il tuo Account Noodle </p>
+  
+        <div class="form-group" id="user-data">
+          <div class="col-sm-9"> 
+            <input type="email" 
+             formControlName="email"
+             class="form-control" 
+             id="email" 
+             placeholder="Inserisci Email " 
+             name="email" 
+             ngModel
+             required 
+             email 
+             >
+          </div>
+        </div>
+  
+  
+        <div class="form-group">
+          <div class="col-sm-9">
+            <input 
+             type="password" 
+             formControlName="password"
+             id="password" 
+             class="form-control" 
+             aria-describedby="passwordHelpInline"
+             placeholder="Inserisci Password" 
+             name="password" 
+             ngModel 
+             password
+             required 
+            >
+          </div>
+        </div>
+  
+  
+        <div class="form-group3">
+         <button type="submit" class="btn btn-block"  [disabled]="!logInForm.valid" > Accedi </button>
+        </div>
+  
+  
+        <div class="link">
+          <p> Non hai un Account? <a href="/signin" style="text-decoration: none;" > Registrati </a> </p>
+          <p> Torna alla <a href="/header" class="text-danger" style="text-decoration: none;" > Home </a> </p>
+        </div>
+  
+      </form>
+    </form>
+  </div>   

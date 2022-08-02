@@ -1,0 +1,71 @@
+<div class="error">
+    <div class="alert alert-danger"  *ngIf="error">
+      <p class="error" >{{error}}</p>
+      <button class="btn btn-danger" (click)="onHandleError()">Okay</button>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <form class="form-horizontal" role="form">
+      <form class="form-horizontal"  #signinForm="ngForm" (ngSubmit)="onSubmit(signinForm)" >
+        
+        <h1 class="title"> 
+          Noodle<span class="marchio">&#174;</span>
+        </h1>
+  
+        <h4 class="accedi">Registrati</h4>
+  
+        <p class="p"> Crea un nuovo Account Noodle </p>
+  
+        <div class="form-group">
+          <div class="col-sm-9">  
+           <input type="email" 
+             id="email" 
+             aria-label="Inserisci Email" 
+             class="form-control" 
+             name= "email" 
+             placeholder="Email *" 
+             ngModel
+             required
+             email 
+            >
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <div class="col-sm-9">
+            <input 
+              type="password" 
+              id="password" 
+              class="form-control" 
+              name= "password"
+              minlength="8"
+              placeholder="Password *" 
+              password
+              ngModel 
+              #password="ngModel"
+              required 
+            >
+            <span *ngIf="!password.valid && password.touched" class="help-block">
+              La tua password deve contenere almeno 8 caratteri.
+            </span>
+          </div>
+          
+        </div>
+  
+        <div class="form-group3">
+  
+          <button class="btn btn-block" type="submit" [disabled]="!signinForm.valid">Registrati</button>
+          <button class="btn btn-block" type="button" routerLink="/header">Annulla</button>
+  
+        </div>  
+  
+        <div class="link">
+          <p> Hai già un Account ? <a href="/login" class="text-danger" style="text-decoration: none;" > Accedi </a> </p>
+          <p> Torna alla <a href="/header" class="text-danger" style="text-decoration: none;" > Home </a> </p>
+        </div>
+      </form> 
+    </form>
+  </div>
+  

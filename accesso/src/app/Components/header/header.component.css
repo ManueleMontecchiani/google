@@ -1,0 +1,276 @@
+.navbar ul{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 15px;
+}
+
+.navbar li{
+    padding-left: 25px;
+}
+
+ul{
+    list-style: none;
+    margin-top: 1pc;
+    margin-right: 10rem;
+}
+
+p {
+    color: gray;
+}
+
+.button , a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.title{
+    color:black;
+    margin-top: 2pc;
+    margin-bottom: 1.5pc;
+    font-size: 7rem;
+}
+
+ img {
+    width: 5rem;
+}
+
+.form-control {
+    background-color: transparent;
+    border: none;
+    width: 600px; 
+    height: 10px;
+}
+
+.btn-primary{
+  width: 150px; 
+  height: 60px;
+}
+
+.lista li{
+    width: 55.5rem;
+    list-style: none;
+    display: flex;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.3);
+}.lista li:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.lista{
+    position: absolute;
+    left: 6.5%;
+    border-top: 1px solid rgb(92, 92, 96);
+    width: 55.5rem;
+}
+
+.lista ul {
+    padding-left: 0px;
+}
+
+.lista .bi-x{
+    text-align: center;
+    width: 22px;
+    height: 28px;
+    margin-right: 1pc;
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+}.lista .bi-x:hover{
+    background-color: rgb(219, 14, 14,0.5);
+    border-radius: 8px;
+}
+
+
+.newlist{
+    padding: 1rem;
+    text-align: left;
+    width: 60rem;
+}
+
+.form{
+    width: 37.5pc;
+    border-radius: 40px;
+    position: relative;
+}
+
+.form .bi-search{
+    color: gray;
+    font-size: 13px;
+    position: absolute;
+    top:16px;
+    left: 20px;
+    border: none;
+}
+
+.form span{
+    position: absolute;
+    right:13%;
+    top: 15px;
+    padding: 2px;
+    border-left: 1px solid rgb(194, 193, 193);
+    font-size: 17px;
+    width: 5px;
+}
+
+.left-pan i{
+   padding-left: 25px;
+   font-size: 14px;
+   color: gray;
+}
+
+.form-input{
+    width: 48rem;
+    height: 50px;
+    text-align: left;
+    margin-left: 3pc;
+    color: gray;
+}.form-input:focus{
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.container{
+    width: 60rem;
+    border-radius: 20px;
+    margin-left: 29.5pc;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 1px solid gray;
+    background-color: white;
+}
+
+ button{
+    border: none;
+    background-color: transparent;
+}
+
+.btn{
+    color:gray;
+}
+
+.posts {
+    margin-top: 0.7pc;
+    margin-left: 3.2pc;
+}
+
+.marchio {
+    font-size: 13px;
+}
+
+.bi-trash3 {
+    color: red;
+    margin-left: 1.5pc;
+    cursor: pointer;
+}
+
+.list-group{
+    width: 59.8rem;
+    margin-top: 1pc;
+    border: none;
+}
+
+.list-group-item{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    padding-top: 1.5rem;
+    background-color: transparent;
+    cursor: pointer;
+}.list-group-item:hover{
+    background-color: rgb(147, 147, 147,0.6);
+}
+
+.list-group-item .bi-search{
+    color: gray;
+    font-size: 13px;
+    margin-left: 0.5pc;
+}
+
+.list-group-item p {
+    color: black;
+}
+
+
+.list-group-item a {
+    color: rgb(126, 126, 126);
+    margin-right: 0.9pc;
+}
+.list-group-item a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
+.addPost {
+    position: absolute;
+    bottom: 26.5%;
+    left: 89%;
+    text-align: center;
+    width: 5rem;
+    height: 2.5rem;
+    border-left: 1px solid gray;
+}
+
+.addPost button {
+    text-align: center;
+    padding: 0.3rem; 
+}
+
+.bi-plus-circle{
+    color: rgb(170, 170, 170);  
+    display: flex;
+    font-size: 1.7rem; 
+    padding-top: 0.1pc;
+    padding-left: 0.4rem;
+}
+.bi-plus-circle:hover{
+    color: rgb(9, 9, 9);
+}
+
+footer{
+    width: 153.6rem;
+    height: 8rem;
+    background-color: rgb(147, 147, 147,0.6);
+    position: absolute;
+    top: 88.7%; 
+    z-index: -1;
+}
+
+footer p {
+    font-size: 1.5rem;
+    color: black;
+    padding-top: 0.5pc;
+    padding-left: 2pc;
+}
+
+.title1{
+    height: 4rem;
+    margin-top: 0.6pc;
+}
+
+.title1 hr{
+ color: white;
+}
+
+p .bi-search {
+    margin-right: 1pc;
+}
+
+.fl ul{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fl li{
+    margin-top: 0.9pc;
+    margin-right: 1.5pc;
+}
+
+

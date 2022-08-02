@@ -1,0 +1,103 @@
+[role="form"] {
+    width: 50rem;
+    height: 48rem;
+    padding-top: 2.5rem;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    border: 1px solid rgb(186, 186, 186) ;
+}
+
+[role="form"] h2 {
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 2pc;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.p{
+    margin-bottom: 1.5pc;
+}
+
+.container{
+    margin: 6pc 11pc;
+    display: flex;
+}
+
+.title{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.title .marchio{
+    font-size: 1rem;
+}
+
+.accedi{
+    text-align: center;
+    margin-top: 1.5pc;
+    margin-bottom: 1pc;
+    font-size: 1.7rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ng-invalid .ng-touched {
+    background-color: rgba(227, 7, 7, 0.1);
+    border: 1px solid red;
+}
+
+
+.help-block{
+    font-size: 13px;
+    color: red;
+}
+
+.control-label{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 10rem;
+}
+
+.form-group{
+    width: 45rem;
+    margin-top: 1pc;
+    margin-left: 5pc;
+}
+
+.form-group3{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-group3 button {
+    margin-top: 0.8pc;
+    margin-bottom: 0.8pc;
+    width: 11rem;
+    height: 4rem;
+    background-color: rgb(213, 213, 213);
+    border: 1px solid black;
+}.form-group3 button:hover{
+    background-color: black;
+    color: white;
+}
+
+.link{
+    margin-top: 2pc;
+}
+
+.link a{
+    color: gray;
+}.link a:hover{
+    color: red;
+}
+
+p{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}

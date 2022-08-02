@@ -1,0 +1,85 @@
+<!--     NAVBAR + BOTTONI PER IL LOG IN E IL SIGN IN    -->
+<div class="navbar" *ngIf="!(afAuth.user | async)">
+    <ul>
+      <li class="nav-item">
+        <p>
+          Nessun utente è collegato
+        </p>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/login">Accedi</a>
+      </li>
+    </ul>
+</div>
+
+<div class="navbar" *ngIf="(afAuth.user | async)">   
+  <ul>
+    <li class="nav-item">
+      <p>
+        L'utente è collegato
+      </p>
+    </li>
+    <li class="nav-item">
+      <button class="button" routerLink="/area-privata">
+        Area Privata
+      </button>
+    </li>
+    <li class="nav-item">
+      <button class="button" (click)="logout()">
+        Esci <span><i class="bi bi-box-arrow-right"></i></span>
+      </button>
+    </li>
+  </ul>
+
+</div>
+  <!--     DA VOOGLE IN POI , QUINDI INPUT E LISTA DA AGGIUNGERE ED ELIMINARE    -->
+
+<div class="input-group mb-3" appBetterColor>
+    <h1 class="title"> 
+      N<span><img src="../../../favicon.ico" alt=""></span>
+      <span><img src="../../../favicon.ico" alt=""></span>dle<span class="marchio">&#174;</span>
+    </h1>
+</div>
+
+<div class="container">
+  <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+      <div class="form">
+          <span class= "bi bi-search"></span>      
+
+          <input 
+            #searchBar
+            type="search"
+            class="form-control form-input"
+            placeholder="Search anything..."
+            id="title"
+            required
+            [(ngModel)] ="searchString"
+            name="title"
+            (keyup)="searchPost(searchBar.value)"
+          />
+
+          <div class="addPost" *ngIf="(afAuth.user | async)">
+           <button type="submit"><i class="bi bi-plus-circle"></i></button>
+          </div>
+      </div> 
+  </form>
+
+  <div class="list-group" *ngIf="loadedPosts.length >= 1 && !isFetching">
+    <div class="list-group-item" *ngFor="let post of loadedPosts">
+     <p> <i class="bi bi-search"></i> {{ post.title }}</p>
+      <a *ngIf="(afAuth.user | async)" (click)="onDelete(post.id ?? '')"> 
+        <i class="bi bi-x-circle"></i>
+      </a>
+    </div>
+  </div> 
+</div>
+
+<footer>
+  <div class="fl">
+    <ul>
+      <li>Pubblicità</li>
+      <li>Soluzioni Aziendali</li>
+      <li>Come Funziona la Ricerca</li>
+    </ul>
+  </div>
+</footer>
